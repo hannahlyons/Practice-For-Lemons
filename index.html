@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
+    
+        <nav class="navbar">
+            <div class="container-xxl">
+            <div class="d-flex w-100 justify-content-between">
         <a href="#" class="logo">Logo</a>
         <div class="group">
             <ul class="navigation">
@@ -22,13 +25,77 @@
                     <ion-icon name="search-outline" class="searchBtn"></ion-icon>
                     <ion-icon name="close-outline" class="closeBtn"></ion-icon>
                 </span>
-                <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+                <ion-icon name="menu-outline" class="menuToggle"><ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Check-Out</a></li>
+                </ul></ion-icon>
             </div>
         </div>
         <div class="searchBox">
             <input type="text" placeholder="Search Here...">
         </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="header-content">
+                    <h1 class="d-flex">Lemons</h1>
+                    <button type="button" class="btn btn-outline-light btn-lg"><a href=products.htmls>Products</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg"><a href=aboutus.html>About Us</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
     </header>
+    <section>
+        <div class="container">
+            <div class="row justify-content-evenly p-4">
+                <div class="col-md-4">
+                    <div class="card" style="width: 25 rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card" style="width: 25rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 25rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+             <div class="parallax">
+                <h1 class="parallaxtext">We are simply the zest!</h1>
+            </div>
+    </section>
     <footer class="bg-light text-center text-lg-start footer" >
         <div class="container-fluid">
             <div class="row">
@@ -97,7 +164,7 @@
         let searchBox = document.querySelector('.searchBox');
         let navigation = document.querySelector('.navigation');
         let menuToggle = document.querySelector('.menutoggle');
-        let header = document.querySelector('header');
+        let nav = document.querySelector('nav');
         searchBtn.onclick = function(){
             searchBox.classList.add('active');
             closeBtn.classList.add('active');
@@ -109,7 +176,7 @@
             searchBtn.classList.remove('active');
         }
         menuToggle.onclick = function(){
-            header.classList.toggle('open');
+            nav.classList.toggle('open');
         }
     </script>
   </body>
