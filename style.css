@@ -27,7 +27,7 @@ nav
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
 
 }
-.logo
+.navbar-brand
 {
     color: #333;
     text-decoration: none;
@@ -84,7 +84,7 @@ nav .search
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    z-index: 10;
+    z-index: 1;
     cursor: pointer;
 }
 .searchBox
@@ -235,4 +235,4 @@ header
     justify-content: center;
     display: flex;
   }
-  .
+  
