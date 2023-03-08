@@ -91,6 +91,7 @@ nav .search
 {
     position: absolute;
     right: -100%;
+    bottom: -2px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -151,7 +152,7 @@ nav .search
 {
     .searchBtn
     {
-        left: 0;
+        left: 1px;
     }
     .menuToggle
     {
@@ -189,7 +190,7 @@ nav .search
 header
 {
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
     background-image: url(headerlemonpic.jpg);
     background-position: bottom;
     background-size: cover;
@@ -219,7 +220,7 @@ header
  {
     background-image: url("movingimage.png");
     width: 100%;
-    min-height: 500px; 
+    min-height: 400px; 
   
     background-attachment: fixed;
     background-position: center;
