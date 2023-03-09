@@ -9,7 +9,7 @@
   </head>
   <body>
     
-        <nav class="navbar navbar-light bg-light justify-content-between">
+        <nav class="navbar navbar-light bg-light justify-content-between shadow-5-strong">
             <div class="container-xxl">
             <div class="d-flex w-100 justify-content-between">
         <a href="#" class="navbar-brand">Logo</a>
@@ -18,7 +18,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Check-Out</a></li>
+                <li><a href="check-out.html">Check-Out</a></li>
             </ul>
             <div class="search">
                 <span class="icon">
@@ -46,23 +46,22 @@
         <div class="container">
             <div class="row">
                 <div class="header-content">
-                    <h1 class="d-flex">Lemons</h1>
-                    <button type="button" class="btn btn-outline-light btn-lg"><a href=products.htmls>Products</a></button>
-                    <button type="button" class="btn btn-outline-light btn-lg"><a href=aboutus.html>About Us</a></button>
+                    <h1>Lemons</h1>
+                    <button type="button" class="btn btn-outline-light btn-lg buttonheader"><a href=products.htmls>Products</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg buttonheader"><a href=aboutus.html>About Us</a></button>
                 </div>
             </div>
         </div>
     </section>
     </header>
-    <section>
+    <section class="Info">
         <div class="container">
             <div class="row justify-content-evenly p-4">
                 <div class="col-md-4">
                     <div class="card" style="width: 25 rem;">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h3 class="mb-4">High Rated Customer Service</h3>
+                          <p class="card-text">5 Star Rated Company 25 years in a row</p>
                           <a href="#" class="card-link">Card link</a>
                           <a href="#" class="card-link">Another link</a>
                         </div>
@@ -93,37 +92,37 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="parallax">
              <div class="parallax">
-                <h1 class="parallaxtext">We are simply the zest!</h1>
+                <h1 class="movingtext text-center"> We are simply the zest!</h1>
             </div>
     </section>
     <footer class="bg-light text-center text-lg-start">
-        <!-- Grid container -->
         <div class="container p-4">
-          <!--Grid row-->
           <div class="row">
-            <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Footer text</h5>
-      
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
+              <h1 class="text-uppercase">Squeeze the Day</h1>
+                        <br>
+                        <h6>Enjoy more lemon fun with a subscription</h6>
+                        <br>
+                        <form class="p-4">
+                            <input type="Email" placeholder="Email..." required>
+                            <button type="submit">
+                                <ion-icon name="send-outline"></ion-icon>
+                            </button>
+                        </form>
             </div>
             <!--Grid column-->
       
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
               <h5 class="text-uppercase">Footer text</h5>
-      
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                aliquam voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
+              <div class="face">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+            </div>
             </div>
             <!--Grid column-->
           </div>
@@ -160,6 +159,19 @@
         }
         menuToggle.onclick = function(){
             nav.classList.toggle('open');
+        }
+    </script>
+    <script>
+        document.querySelector("body").addEventListener("mousemove", eyeball);
+        function eyeball() {
+            var eye = document.querySelectorAll(".eye");
+            eye.forEach(function (eye) {
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 50)
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 50);
+                let radian = Math.atan2(event.pageX - x, event.pageY - y);
+                let rot = (radian * (180 / Math.PI) * -1) + 270;
+                eye.style.transform = "rotate(" + rot + "deg)"
+            })
         }
     </script>
   </body>
