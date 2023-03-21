@@ -238,6 +238,10 @@ header
     margin-bottom: 100px;
  }
  /*footer*/
+ footer
+ {
+    background-color: #a39999;
+ }
  /*footer row 1 column 1*/
 form
 {
@@ -261,6 +265,11 @@ form button
     background: transparent;
     border: 0;
     outline: none;
+}
+.logo-socials
+{
+    height: 50px;
+    width: 50px;
 }
 /*Footer row 1 column 2*/
 
